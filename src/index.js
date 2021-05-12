@@ -1,13 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import { render } from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { HoursProvider } from './services/hours/provider';
+import { ThemeLayoutProvider } from './services/theme/provider';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+render(
+  <HoursProvider>
+    <ThemeLayoutProvider>
+      <App />
+    </ThemeLayoutProvider>
+  </HoursProvider>,
   document.getElementById('root')
 );
 
