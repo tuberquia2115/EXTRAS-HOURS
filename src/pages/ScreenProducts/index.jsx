@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import {Avatar, Button} from '@material-ui/core';
 import { Products } from "../../Components/Products";
 import { CartContext } from "../../context";
 
@@ -9,19 +10,65 @@ export const ScreenProducts = () => {
   } = useContext(CartContext);
   const productsItems = [
     {
-      name: "grema",
+      name: "Crema",
       id: 12,
       srcImg: "https://pideygana.com/wp-content/uploads/2019/06/3500052589.png",
     },
     {
-      name: "cebolla",
-      id: 62,
+      name: "Crema",
+      id: 12,
+      srcImg: "https://pideygana.com/wp-content/uploads/2019/06/3500052589.png",
+    },
+    {
+      name: "Crema",
+      id: 232,
+      srcImg: "https://pideygana.com/wp-content/uploads/2019/06/3500052589.png",
+    },
+    {
+      name: "Cebolla",
+      id: 653,
       srcImg:
         "https://images.rappi.com.mx/products/978738602-1604489094230.png",
     },
     {
-      name: "tomate",
+      name: "Cebolla",
+      id: 262,
+      srcImg:
+        "https://images.rappi.com.mx/products/978738602-1604489094230.png",
+    },
+    {
+      name: "Cebolla",
+      id: 342,
+      srcImg:
+        "https://images.rappi.com.mx/products/978738602-1604489094230.png",
+    },
+    {
+      name: "Tomate",
       id: 42,
+      srcImg:
+        "https://i.pinimg.com/originals/6d/48/bd/6d48bd138f272a340c17b8e21dd7f47a.png",
+    },
+    {
+      name: "Tomate",
+      id: 82,
+      srcImg:
+        "https://i.pinimg.com/originals/6d/48/bd/6d48bd138f272a340c17b8e21dd7f47a.png",
+    },
+    {
+      name: "Tomate",
+      id: 33,
+      srcImg:
+        "https://i.pinimg.com/originals/6d/48/bd/6d48bd138f272a340c17b8e21dd7f47a.png",
+    },
+    {
+      name: "Tomate",
+      id: 52,
+      srcImg:
+        "https://i.pinimg.com/originals/6d/48/bd/6d48bd138f272a340c17b8e21dd7f47a.png",
+    }, 
+    {
+      name: "Tomate",
+      id: 89,
       srcImg:
         "https://i.pinimg.com/originals/6d/48/bd/6d48bd138f272a340c17b8e21dd7f47a.png",
     },
@@ -54,16 +101,18 @@ export const ScreenProducts = () => {
                     borderRadius: "10px",
                   }}
                 >
-                  <img
+                  <Avatar
                     alt={`${name}-${id}`}
                     src={srcImg}
-                    height="50"
-                    width="50"
                   />
-                  <p>{name}</p>
-                  <button onClick={() => deleteproduct(id)}>
+                  <h3>{name}</h3>
+                  <Button 
+                  variant="contained"
+                  color="primary"
+                  size="medium"
+                  onClick={() => deleteproduct(id)}>
                     Eliminar del carrito
-                  </button>
+                  </Button>
                 </div>
               </li>
             ))}

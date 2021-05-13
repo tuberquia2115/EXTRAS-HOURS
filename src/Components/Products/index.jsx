@@ -4,7 +4,7 @@ import { Product } from "../UI/Product";
 export const Products = ({ products }) => (
   <div>
      <h1 style={{ textAlign: "center" }}>Productos</h1>
-    <ul style={{display: "flex", flexDirection: "row", listStyle: "none"}}>
+    <ul style={{display: "flex", flexDirection: "row", listStyle: "none", flexWrap: "wrap"}}>
       {products.map((elm) => (
         <li>
           <Product item={elm} />
