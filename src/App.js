@@ -1,16 +1,12 @@
 import React from 'react';
 import './app.css'
-import { Form } from './Components/Form';
-import { Header } from './Components/Header';
-
+//import { ScreenExtrasHours } from './pages/ScreenExtrasHours';
+import { ScreenProducts } from './pages/ScreenProducts';
 function App() {
 
   return (
     <>
-      <Header />
-      <div className="App">
-        <Form />
-      </div>
+     <ScreenProducts/>
     </>
   );
 }

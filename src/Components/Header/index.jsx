@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Brightness7Rounded, Brightness2Rounded } from "@material-ui/icons";
 import {
   AppBar,
@@ -7,7 +7,7 @@ import {
   Switch,
   makeStyles,
 } from "@material-ui/core";
-import { HoursContext, ThemeContext } from "../../context";
+import { ThemeContext } from "../../context";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,10 +18,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 export const Header = () => {
-  const {data, mutations} = useContext(HoursContext);
+  //const {data, mutations} = useContext(HoursContext);
 
-  console.log("data", data);
-  console.log("mutrations", mutations);
 
   const classes = useStyles();
   return (
